@@ -86,7 +86,13 @@ public class TextBasedAdventure {
     //If the user has the sword they win and if not they lose 
     public void fight() {
         if (hasSword) {
-            System.out.println("You defeat the giant with your sword and run out of the cave!");
+            // makes a chance of not winning even with sword
+            int chance = (int)(10 * Math.random());
+            if (chance >= 5){
+                System.out.println("You defeat the giant with your sword and run out of the cave!");
+            } else {
+                System.out.println("You swing your mighty sword and miss him. The giant kills you.");
+            }
         } else {
             System.out.println("You get stomped by the giant and red stuff goes everywhere.");
         }
