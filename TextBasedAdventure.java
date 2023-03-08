@@ -87,14 +87,19 @@ public class TextBasedAdventure {
     public void fight() {
         if (hasSword) {
             // makes a chance of not winning even with sword
-            int chance = (int)(10 * Math.random());
-            if (chance >= 5){
+            int chance1 = (int)(10 * Math.random());
+            if (chance1 >= 5){
                 System.out.println("You defeat the giant with your sword and run out of the cave!");
             } else {
                 System.out.println("You swing your mighty sword and miss him. The giant kills you.");
             }
         } else {
-            System.out.println("You get stomped by the giant and red stuff goes everywhere.");
+            int chance2 = (int)(50 * Math.random());
+            if (chance2 == 25){
+                System.out.println("You punch the giants big toe and he runs away crying.");
+            } else {
+                System.out.println("You get stomped by the giant and red stuff goes everywhere.");
+            }
         }
     }
 
