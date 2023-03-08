@@ -75,7 +75,7 @@ public class TextBasedAdventure {
 
     //If you go up you hit your head and are prompted to pick another direction
     public void goUp() {
-        System.out.println("You hit your head! OUCH!");
+        System.out.println("You hit your head! OUCH! Damn!");
         start();
     }
 
