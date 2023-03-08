@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class TextBasedAdventure {
@@ -22,6 +23,18 @@ public class TextBasedAdventure {
         }
     }
 
+    public void start2()
+    {
+        System.out.println("You're in the room where you picked up the sword. What would you like to do?\n1. Go left \n2. Go more right");
+        int input = keyboardInput.nextInt();
+        if (input == 1) {
+            start();
+        }
+        else if (input == 2) {
+            goMoreRight();
+        }
+    }
+
     public void goLeft() {
         System.out.println("Oh no! You run into a giant! Fight or flight?\n1. Fight \n2. Flight");
         int input = keyboardInput.nextInt();
@@ -38,10 +51,12 @@ public class TextBasedAdventure {
             System.out.println("You find a sword on the ground!");
             hasSword = true;
         }
-        else {
-            System.out.println("There's nothing here...");
-        }
-        start();
+        start2();
+    }
+
+    public void goMoreRight() {
+        System.out.println("There's nothing here...");
+        start2();
     }
 
     public void fight() {
