@@ -56,8 +56,10 @@ public class TextBasedAdventure {
             int peaceChances = (int)Math.floor(Math.random() * (max - min + 1) + min);
             if (peaceChances > 5) {
                 start();
+                System.out.println("You made temporary peace with the giant");
             } 
             else {
+                System.out.println("You did not make peace with the giant");
                 fight();
             }
         }
