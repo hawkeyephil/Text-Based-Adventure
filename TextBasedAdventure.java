@@ -12,13 +12,16 @@ public class TextBasedAdventure {
     }
 
     public void start() {
-        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right");
+        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right \n3. Go up");
         int input = keyboardInput.nextInt();
         if (input == 1) {
             goLeft();
         }
         else if (input == 2) {
             goRight();
+        }
+        else if(input == 3) {
+            goUp();
         }
     }
 
@@ -41,6 +44,12 @@ public class TextBasedAdventure {
         else {
             System.out.println("There's nothing here...");
         }
+        start();
+    }
+
+    //If you go up you hit your head and are prompted to pick another direction
+    public void goUp() {
+        System.out.println("You hit your head!");
         start();
     }
 
