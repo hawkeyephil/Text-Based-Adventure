@@ -5,6 +5,7 @@ public class TextBasedAdventure {
     boolean hasSword = false;
     Scanner keyboardInput = new Scanner(System.in);
 
+    //Initial Message and starts game
     public void execute() {
         System.out.println("Welcome to Escape from the Cave! Press enter when you are ready to start...");
         keyboardInput.nextLine();
@@ -12,6 +13,7 @@ public class TextBasedAdventure {
         start();
     }
 
+    //Start game by prompting user to pick a direction
     public void start() {
         System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right \n3. Go up");
         int input = keyboardInput.nextInt();
@@ -38,6 +40,7 @@ public class TextBasedAdventure {
         }
     }
 
+    //If user selects left prompt the user to select fight or flight and either 
     public void goLeft() {
         System.out.println("Oh no! You run into a giant! Fight or flight?\n1. Fight \n2. Flight \n3. Make Peace");
         int input = keyboardInput.nextInt();
@@ -60,6 +63,7 @@ public class TextBasedAdventure {
         }
     }
 
+    //If the user goes right either pick up the sword enter a new room 
     public void goRight() {
         if (!hasSword) {
             System.out.println("You find a sword on the ground!");
@@ -79,6 +83,7 @@ public class TextBasedAdventure {
         start();
     }
 
+    //If the user has the sword they win and if not they lose 
     public void fight() {
         if (hasSword) {
             // makes a chance of not winning even with sword
